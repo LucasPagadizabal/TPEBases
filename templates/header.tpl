@@ -17,8 +17,10 @@
     <div class="col-md-12 nav_menu">
       <ul class="nav nav-tabs">
         <li role="presentation"><a class="nav-Element" href="home">Home</a></li>
-        <li role="presentation"><a class="nav-Element" href="alta">Alta</a></li>
-        <li role="presentation"><a class="" href="">Messages</a></li>
+        <li role="presentation"><a class="nav-Element" href="altaComp">Alta Competencia</a></li>
+        <li role="presentation"><a class="nav-Element" href="altaComp">Alta Competencia</a></li>
+        <li role="presentation"><a class="nav-Element" href="altaComp">Alta Deportista</a></li>
+        <li role="presentation"><a class="nav-Element" href="altaComp">Inscripción</a></li>
       </ul>
     </div>
 

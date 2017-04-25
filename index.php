@@ -2,10 +2,11 @@
 
 require_once("config/configApp.php");
 require_once("controller/home.php");
-require_once("controller/alta.php");
+require_once("controller/Competencia.php");
 
 $home = new home();
-$alta = new alta();
+
+$competencia = new Competencia();
 
 if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST)){
   // Home del sitio
@@ -15,8 +16,8 @@ if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST)){
 
 switch($_REQUEST[ConfigApp::$ACTION]){
 
-  case ConfigApp::$ACTION_ALTA:
-  $alta->iniciar();
+  case ConfigApp::$ACTION_ALTA_COMP:
+  $competencia->altaComp();
   break;
 
   case ConfigApp::$ACTION_HOME:
