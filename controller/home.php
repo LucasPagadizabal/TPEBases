@@ -9,8 +9,8 @@
       $this->view = new viewHome();
     }
 
-    function iniciar($mensaje){
-      $this->view->iniciar($mensaje);
+    function iniciar(){
+      $this->view->iniciar();
     }
 
     function home(){

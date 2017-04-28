@@ -10,8 +10,8 @@ include_once(dirname(__DIR__)."/libs/Smarty.class.php");
       $this->smarty = new Smarty();
     }
 
-  function iniciar($m){
-    $this->smarty->assign("mensaje", $m);
+  function iniciar(){
+    //$this->smarty->assign("mensaje", $m);
     $this->smarty->display("body.tpl");
   }
 
