@@ -1,0 +1,172 @@
+body {
+ background-image: url("../img/back-azul.jpg");
+
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+  background-position: center;
+
+
+}
+
+.mensajeimg{
+/* color: white; */
+}
+.panel{
+  background: none;
+}
+.ec-stars-wrapper {
+	font-size: 0;
+	display: inline-block;
+}
+
+.ec-stars-wrapper a {
+	text-decoration: none;
+	display: inline-block;
+	/* Volver a dar tamaño al texto */
+	font-size: 32px;
+	font-size: 2rem;
+	color: #888;
+}
+
+.ec-stars-wrapper:hover a {
+	color: rgb(39, 130, 228);
+}
+
+.ec-stars-wrapper > a:hover ~ a {
+	color: #888;
+}
+
+.margen {
+  margin: 20px;
+}
+
+.comentarios, .comentarionuevo{
+  color: black;
+}
+
+.cat_prod {
+  color:black;
+  margin: 10px;
+  float: right;
+}
+
+.plus{
+  color: transparent;
+}
+.eliminarCategoria{
+  text-decoration: none;
+  color: white;
+}
+
+/*Div oculto de "venta"*/
+.ocultarabm {
+  color: black;
+  display: none;
+}
+
+
+.formulario{
+  margin: 10px;
+}
+
+.control-label {
+  color: white;
+}
+
+.imgproducto{
+  width: 100px;
+  height: 100px;
+}
+
+/*Contenido de la pagina*/
+.page {
+  //background-color: rgba(1, 0, 0, 0.9);
+  margin-top: 20px;
+}
+
+/*para que el nav no pise el contenido*/
+.alto50{
+  font-family: 'Montserrat', sans-serif;
+  height: 50px;
+}
+
+.navbar {
+  z-index: 1;
+}
+.carousel-inner{
+  height: 400px;
+}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      height: 50%;
+      margin: auto;
+}
+
+/*Menu deslizable*/
+.deslizable {
+  background-color: black;
+}
+
+/*Menu deslizable letra*/
+.deslizable li a {
+  color: #FFF;
+}
+
+footer {
+  margin: 20px;
+  clear:both;
+  text-align: center;
+  color: white;
+}
+
+/*Nav*/
+.affix {
+  top: 0;
+  width: 100%;
+}
+
+p {
+  font-size: 14px;
+}
+
+@media (max-width: 500px) {
+  .carousel-inner {
+  height: 150px;
+  }
+}
+
+.ec-stars-wrapper {
+	/* Espacio entre los inline-block (los hijos, los `a`)
+	   http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
+	font-size: 0;
+	/* Podríamos quitarlo,
+		pero de esta manera (siempre que no le demos padding),
+		sólo aplicará la regla .ec-stars-wrapper:hover a cuando
+		también se esté haciendo hover a alguna estrella */
+	display: inline-block;
+}
+.ec-stars-wrapper a {
+	text-decoration: none;
+	display: inline-block;
+	/* Volver a dar tamaño al texto */
+	font-size: 32px;
+	font-size: 2rem;
+  opacity: 0.5;
+	color: #888;
+}
+
+.ec-stars-wrapper:hover a {
+	color: rgb(39, 130, 228);
+  opacity: 1;
+}
+/*
+ * El selector de hijo, es necesario para aumentar la especifidad
+ */
+.ec-stars-wrapper > a:hover ~ a {
+	color: #888;
+  opacity: 0.5;
+}

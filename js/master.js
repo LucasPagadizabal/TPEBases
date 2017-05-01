@@ -5,7 +5,7 @@ $(document).ready(function(){
       var dir = $(this).attr("href");
       $.get("index.php?action="+dir,function(data) {
         console.log(data);
-        $('#body').html(data);
+        $('.page').html(data);
         //initDynamicEventHandlers();
       });
     });

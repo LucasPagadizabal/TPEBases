@@ -7,6 +7,8 @@ class ConfigApp{
   public static $ACTION_ALTA_COMP = "altaComp";
   public static $ACTION_ALTA_DEP = "altaDep";
   public static $ACTION_INSCRIPCION = "inscripcion";
+  public static $ACTION_SERVICIOS = "servicios";
+
 
 }
 
