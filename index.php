@@ -27,12 +27,16 @@ switch($_REQUEST[ConfigApp::$ACTION]){
   $competencia->altaComp();
   break;
 
-  case ConfigApp::$ACTION_ALTA_DEP:
-  $deportista->altaDepor();
+  case ConfigApp::$ACTION_DEPORTISTA:
+  $deportista->formDeportista();
   break;
 
   case ConfigApp::$ACTION_INSCRIPCION:
   $inscripcion->inscripcion();
+  break;
+
+  case ConfigApp::$ACTION_AGREGAR_DEPORTISTA:
+  $deportista->altaDepor();
   break;
 
 
