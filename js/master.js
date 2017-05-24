@@ -30,12 +30,19 @@ $(document).ready(function(){
         });
     });
 
-    // $(".nav-Element").click (function(event){
-    //   event.preventDefault();
-    //   $.get("index.php?action=" + $(this).attr("href"), function(data) {
-    //     $('#body').html(data);
-    //     console.log("sa");
-    //   });
-    // });
+    $(document).on("change","#addFederaciones",function(ev) {
+      ev.preventDefault();
 
+      if($("#federaciones").attr("disabled") == "disabled"){
+        $("#federaciones").removeAttr('disabled');
+      }else{
+        $("#federaciones").attr("disabled","disabled");
+      }
+    })
+
+    $(document).on("change","#federado",function(ev) {
+      ev.preventDefault();
+      console.log(this.checked);
+      console.log("hoa");
+    })
 });

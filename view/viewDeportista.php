@@ -13,8 +13,10 @@ class viewDeportista{
     $this->smarty = new Smarty();
   }
 
-  function mostrarFormAltaDepor(){
-    //  $this->smarty->assign();
+  function mostrarFormAltaDepor($personas,$categorias,$federaciones){
+      $this->smarty->assign("federaciones",$federaciones);
+      $this->smarty->assign("categorias",$categorias);
+      $this->smarty->assign("personas",$personas);
       $this->smarty->display("formAltaDepor.tpl");
   }
 
