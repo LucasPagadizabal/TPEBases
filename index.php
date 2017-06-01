@@ -24,7 +24,7 @@ switch($_REQUEST[ConfigApp::$ACTION]){
   break;
 
   case ConfigApp::$ACTION_ALTA_COMP:
-  $competencia->altaComp();
+  $competencia->formAltaComp();
   break;
 
   case ConfigApp::$ACTION_DEPORTISTA:
@@ -39,6 +39,9 @@ switch($_REQUEST[ConfigApp::$ACTION]){
   $deportista->altaDepor();
   break;
 
+  case ConfigApp::$ACTION_AGREGAR_COMPETENCIA:
+  $competencia->altaComp();
+  break;
 
 }
 

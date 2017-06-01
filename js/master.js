@@ -11,6 +11,22 @@ $(document).ready(function(){
     });
 
 
+    $(document).on("submit", ".formComp", function(event)
+    {
+        event.preventDefault();
+        var url=$(this).attr("href");
+        $.ajax({
+            url: url,
+            type: $(this).attr("method"),
+            data: new FormData(this),
+            processData: false,
+            contentType: false,
+            success: function (data)
+            {
+              $('.page').html(data);
+            },
+        });
+    });
 
 
     $(document).on("submit", ".formDeportista", function(event)
@@ -42,7 +58,6 @@ $(document).ready(function(){
 
     $(document).on("change","#federado",function(ev) {
       ev.preventDefault();
-      console.log(this.checked);
-      console.log("hoa");
+
     })
 });

@@ -10,6 +10,7 @@ class ConfigApp{
   public static $ACTION_SERVICIOS = "servicios";
 
   public static $ACTION_AGREGAR_DEPORTISTA = 'agregar_deportista';
+  public static $ACTION_AGREGAR_COMPETENCIA= 'agregar_competencia';
 
 
 }

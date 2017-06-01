@@ -10,10 +10,11 @@ class viewCompetencia{
     $this->smarty = new Smarty();
   }
 
-  function mostrarFormAltaCompetencia(){
-  //  $this->smarty->assign();
+  function mostrarFormAltaCompetencia($idDisciplinas){
+    $this->smarty->assign("disciplinas",$idDisciplinas);
     $this->smarty->display("formAltaComp.tpl");
   }
+
 }
 
 

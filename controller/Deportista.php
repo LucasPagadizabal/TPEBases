@@ -20,18 +20,16 @@ class Deportista{
       $categorias = $this->modelDeportista->getCategorias();
     //traer cdo de federacion y cdo de Disciplina de federacion--pueden ser null
       $federaciones = $this->modelDeportista->getFederaciones();
-  
+
     //reestricciones--
     //    Un deportista no puede formar parte de más de tres equipos en un mismo año.
 
     $this->viewDeportista->mostrarFormAltaDepor($personas,$categorias,$federaciones);
   }
   function altaDepor(){
-
     $deportista = $_POST;
-
     $this->modelDeportista->addDeportista($deportista);
-
+    $this->formDeportista();
   }
 
 }
