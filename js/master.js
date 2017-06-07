@@ -10,6 +10,16 @@ $(document).ready(function(){
       });
     });
 
+    $(document).on("click",".sel-serv", function(event){
+       event.preventDefault();
+      var nro = $(this).attr("nroSer");
+      $.get("index.php?action=servicio"+nro,function(data) {
+        console.log(data);
+        $('.page').html(data);
+        //initDynamicEventHandlers();
+      });
+    });
+
 
     $(document).on("submit", ".formComp", function(event)
     {

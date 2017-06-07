@@ -16,6 +16,11 @@ class Servicios{
   function servicios(){
     $this->viewServicios->showServicios();
   }
+
+  function servicio($numero){
+    $this->viewServicios->showServicio($numero);
+  }
+
 }
 
 

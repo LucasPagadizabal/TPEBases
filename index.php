@@ -5,11 +5,13 @@ require_once("controller/home.php");
 require_once("controller/Competencia.php");
 require_once("controller/Deportista.php");
 require_once("controller/Inscripcion.php");
+require_once("controller/Servicios.php");
 
 $home = new home();
 $competencia = new Competencia();
 $deportista = new Deportista();
 $inscripcion = new Inscripcion();
+$servicios = new Servicios();
 
 if (!array_key_exists(ConfigApp::$ACTION,$_REQUEST)){
   // Home del sitio
@@ -41,6 +43,26 @@ switch($_REQUEST[ConfigApp::$ACTION]){
 
   case ConfigApp::$ACTION_AGREGAR_COMPETENCIA:
   $competencia->altaComp();
+  break;
+
+  case ConfigApp::$ACTION_SERVICIOS:
+  $servicios->servicios();
+  break;
+
+  case ConfigApp::$ACTION_SERVICIO1:
+  $servicios->servicio(1);
+  break;
+
+  case ConfigApp::$ACTION_SERVICIO2:
+  $servicios->servicio(2);
+  break;
+
+  case ConfigApp::$ACTION_SERVICIO3:
+  $servicios->servicio(3);
+  break;
+
+  case ConfigApp::$ACTION_SERVICIO4:
+  $servicios->servicio(4);
   break;
 
 }

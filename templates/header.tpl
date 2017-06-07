@@ -13,7 +13,7 @@
   </head>
 <body>
   <header>
-    <img class="center-block img-responsive" src="img/back-aros.png" alt="arosOlimpiadas" style="width:30% ;height:30%">
+    <img class="center-block img-responsive logo-web" src="img/back-aros.png" alt="arosOlimpiadas">
   </header>
 
     <div class="alto50">

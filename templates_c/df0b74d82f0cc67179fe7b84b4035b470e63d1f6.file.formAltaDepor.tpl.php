@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2017-05-24 18:45:44
+<?php /* Smarty version Smarty-3.1.14, created on 2017-06-07 02:28:07
          compiled from ".\templates\formAltaDepor.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:1375259036862ddd994-23327340%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'df0b74d82f0cc67179fe7b84b4035b470e63d1f6' => 
     array (
       0 => '.\\templates\\formAltaDepor.tpl',
-      1 => 1495644190,
+      1 => 1496793456,
       2 => 'file',
     ),
   ),
@@ -28,8 +28,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59036862e9f424_20910222')) {function content_59036862e9f424_20910222($_smarty_tpl) {?><div style="margin-top:50px;" class="panel panel-default col-md-7 col-md-offset-2">
-  <h3>Alta Deportista</h3>
+<?php if ($_valid && !is_callable('content_59036862e9f424_20910222')) {function content_59036862e9f424_20910222($_smarty_tpl) {?><div class="panel panel-default col-md-7 col-md-offset-2 titulo-form" >
+    <h3>Alta Deportista</h3>
+</div>
+<div  class="panel panel-default col-md-7 col-md-offset-2 panel-form" >
     <form class="formDeportista" method="post" href="index.php?action=agregar_deportista">
 
       <select class="form-control" name="doc_deportista">

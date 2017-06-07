@@ -1,70 +1,73 @@
 body {
  background-image: url("../img/back-azul.jpg");
-
   font-family: 'Open Sans', sans-serif;
   color: white;
   background-repeat: no-repeat;
   background-size:cover;
   background-attachment: fixed;
   background-position: center;
+}
 
+.home-text{
+  text-align: justify;
+}
 
+.logo-web{
+  width: 25%;
+  height: 25%;
 }
 
 .mensajeimg{
 /* color: white; */
 }
-.panel{
+
+.panel {
   background: none;
-}
-.ec-stars-wrapper {
-	font-size: 0;
-	display: inline-block;
+  border-width: 4px;
 }
 
-.ec-stars-wrapper a {
-	text-decoration: none;
-	display: inline-block;
-	/* Volver a dar tamaño al texto */
-	font-size: 32px;
-	font-size: 2rem;
-	color: #888;
+.panel-form{
+  padding: 20px;
 }
+.titulo-form  h3,.titulo-serv  h3{
+  text-align: center;
+  margin-top: 10px;
+  color: rgb(4, 6, 52);
+  font-weight: bold;
 
-.ec-stars-wrapper:hover a {
-	color: rgb(39, 130, 228);
 }
+.titulo-form,.titulo-serv {
+  background-color: white;
+}
+ .sel-serv{
+   border: 4px solid white;
+   margin: 5px;
+   height: 100px;
+   text-align: center;
 
-.ec-stars-wrapper > a:hover ~ a {
-	color: #888;
-}
+ }
+
+ .sel-serv:hover{
+   background-color: rgb(26, 136, 207);
+   cursor: pointer;
+ }
+
+ .sel-serv >  h3{
+   position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ }
+
 
 .margen {
   margin: 20px;
 }
 
-.comentarios, .comentarionuevo{
-  color: black;
-}
 
-.cat_prod {
-  color:black;
-  margin: 10px;
-  float: right;
-}
-
-.plus{
-  color: transparent;
-}
 .eliminarCategoria{
   text-decoration: none;
   color: white;
-}
-
-/*Div oculto de "venta"*/
-.ocultarabm {
-  color: black;
-  display: none;
 }
 
 
@@ -76,10 +79,6 @@ body {
   color: white;
 }
 
-.imgproducto{
-  width: 100px;
-  height: 100px;
-}
 
 /*Contenido de la pagina*/
 .page {
@@ -137,36 +136,4 @@ p {
   .carousel-inner {
   height: 150px;
   }
-}
-
-.ec-stars-wrapper {
-	/* Espacio entre los inline-block (los hijos, los `a`)
-	   http://ksesocss.blogspot.com/2012/03/display-inline-block-y-sus-empeno-en.html */
-	font-size: 0;
-	/* Podríamos quitarlo,
-		pero de esta manera (siempre que no le demos padding),
-		sólo aplicará la regla .ec-stars-wrapper:hover a cuando
-		también se esté haciendo hover a alguna estrella */
-	display: inline-block;
-}
-.ec-stars-wrapper a {
-	text-decoration: none;
-	display: inline-block;
-	/* Volver a dar tamaño al texto */
-	font-size: 32px;
-	font-size: 2rem;
-  opacity: 0.5;
-	color: #888;
-}
-
-.ec-stars-wrapper:hover a {
-	color: rgb(39, 130, 228);
-  opacity: 1;
-}
-/*
- * El selector de hijo, es necesario para aumentar la especifidad
- */
-.ec-stars-wrapper > a:hover ~ a {
-	color: #888;
-  opacity: 0.5;
 }

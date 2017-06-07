@@ -1,5 +1,7 @@
-<div style="margin-top:50px;" class="panel panel-default col-md-7 col-md-offset-2">
-  <h3>Alta Deportista</h3>
+<div class="panel panel-default col-md-7 col-md-offset-2 titulo-form" >
+    <h3>Alta Deportista</h3>
+</div>
+<div  class="panel panel-default col-md-7 col-md-offset-2 panel-form" >
     <form class="formDeportista" method="post" href="index.php?action=agregar_deportista">
 
       <select class="form-control" name="doc_deportista">

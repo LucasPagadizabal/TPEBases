@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2017-05-23 22:24:17
+<?php /* Smarty version Smarty-3.1.14, created on 2017-06-07 00:52:25
          compiled from ".\templates\header.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:628758fadb0199d0a3-61647554%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '10e0737838b4a574ef135d0c601e7b602cfaf37a' => 
     array (
       0 => '.\\templates\\header.tpl',
-      1 => 1495495821,
+      1 => 1496789535,
       2 => 'file',
     ),
   ),
@@ -34,7 +34,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   </head>
 <body>
   <header>
-    <img class="center-block img-responsive" src="img/back-aros.png" alt="arosOlimpiadas" style="width:30% ;height:30%">
+    <img class="center-block img-responsive logo-web" src="img/back-aros.png" alt="arosOlimpiadas">
   </header>
 
     <div class="alto50">

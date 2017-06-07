@@ -13,9 +13,14 @@ class viewServicios{
     $this->smarty = new Smarty();
   }
 
-  function showSerivios(){
+  function showServicios(){
     //$this->smarty->assign('','');
     $this->smarty->display('servicios.tpl');
+  }
+
+  function showServicio($numero){
+
+    $this->smarty->display('servicio'.$numero.'.tpl');
   }
 }
 
