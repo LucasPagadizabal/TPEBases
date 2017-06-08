@@ -13,6 +13,12 @@ include_once ("models/Model.php");
     $sentencia->execute();
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
+
+  function getCompetencias(){
+    $sentencia = $this->db->prepare('select idCompetencia,nombre from gr04_competencia;');
+    $sentencia->execute();
+    return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+  }
 }
 
  ?>

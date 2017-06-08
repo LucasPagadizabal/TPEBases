@@ -14,13 +14,17 @@ class viewServicios{
   }
 
   function showServicios(){
-    //$this->smarty->assign('','');
     $this->smarty->display('servicios.tpl');
   }
 
-  function showServicio($numero){
+  function showServicio1($competencias){
+    $this->smarty->assign('competencias',$competencias);
+    $this->smarty->display('servicio1.tpl');
+  }
 
-    $this->smarty->display('servicio'.$numero.'.tpl');
+  function showListaServicio1($deportistas){
+    $this->smarty->assign('deportistas',$deportistas);
+    $this->smarty->display('servicio1lista.tpl');
   }
 }
 

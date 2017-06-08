@@ -20,6 +20,16 @@ $(document).ready(function(){
       });
     });
 
+  //  object.onchange = function(){myScript};
+  $(document).on("change",".idCompetenciaSel", function(event){
+    event.preventDefault();
+    //console.log($(this).val());
+   $.get("index.php?action=servicio1lista",{ idcompetencia: $(this).val() },function(data) {
+     console.log(data);
+     $('#serv1lista').html(data);
+     //initDynamicEventHandlers();
+   });
+  });
 
     $(document).on("submit", ".formComp", function(event)
     {
