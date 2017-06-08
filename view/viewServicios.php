@@ -26,6 +26,16 @@ class viewServicios{
     $this->smarty->assign('deportistas',$deportistas);
     $this->smarty->display('servicio1lista.tpl');
   }
+
+  function showServicio3($competencias){
+    $this->smarty->assign('competencias',$competencias);
+    $this->smarty->display('servicio3.tpl');
+  }
+
+  function showListaServicio3($clasificaciones){
+    $this->smarty->assign('clasificaciones',$clasificaciones);
+    $this->smarty->display('servicio3lista.tpl');
+  }
 }
 
 

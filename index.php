@@ -65,6 +65,10 @@ switch($_REQUEST[ConfigApp::$ACTION]){
   $servicios->servicio3();
   break;
 
+  case ConfigApp::$ACTION_SERVICIO3LISTA:
+  $servicios->servicio3lista();
+  break;
+
   case ConfigApp::$ACTION_SERVICIO4:
   $servicios->servicio4();
   break;

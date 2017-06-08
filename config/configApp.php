@@ -16,6 +16,7 @@ class ConfigApp{
   public static $ACTION_SERVICIO1LISTA = "servicio1lista";
   public static $ACTION_SERVICIO2 = "servicio2";
   public static $ACTION_SERVICIO3 = "servicio3";
+  public static $ACTION_SERVICIO3LISTA = "servicio3lista";
   public static $ACTION_SERVICIO4 = "servicio4";
 
 

@@ -24,12 +24,16 @@ $(document).ready(function(){
   $(document).on("change",".idCompetenciaSel", function(event){
     event.preventDefault();
     //console.log($(this).val());
-   $.get("index.php?action=servicio1lista",{ idcompetencia: $(this).val() },function(data) {
+    var path= "servicio"+$(this).attr("nroSer")+"lista";
+   $.get("index.php?action="+path,{ idcompetencia: $(this).val() },function(data) {
      console.log(data);
-     $('#serv1lista').html(data);
+     console.log(path);
+     $('#'+path).html(data);
      //initDynamicEventHandlers();
    });
   });
+
+
 
     $(document).on("submit", ".formComp", function(event)
     {

@@ -29,11 +29,23 @@ class Servicios{
   }
 
   function servicio1lista(){
-    echo json_encode($_GET);
     $competencia= $_GET['idcompetencia'];
     $deportistas = $this->ServiciosModel->getDeportistas($competencia);
     $this->viewServicios->showListaServicio1($deportistas);
   }
+
+
+  function servicio3(){
+      $competencias = $this->CompetenciaModel->getCompetencias();
+      $this->viewServicios->showServicio3($competencias);
+  }
+
+  function servicio3lista(){
+    $competencia= $_GET['idcompetencia'];
+    $clasificaciones = $this->ServiciosModel->getClasificaciones($competencia);
+    $this->viewServicios->showListaServicio3($clasificaciones);
+  }
+
 
 }
 

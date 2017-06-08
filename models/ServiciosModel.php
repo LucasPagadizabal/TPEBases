@@ -13,5 +13,11 @@ class ServiciosModel extends Model{
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
 
+  function getClasificaciones($competencia){
+    $sentencia = $this->db->prepare("select * from  fn_GR04_equipos_deportista($competencia)");
+    $sentencia->execute();
+    return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+  }
+
 }
  ?>
