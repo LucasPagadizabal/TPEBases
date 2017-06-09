@@ -8,13 +8,13 @@ class DeportistaModel extends Model{
   }
 
   function getPersonas(){
-    $sentencia = $this->db->prepare("select nroDoc,tipoDoc from G4_persona where nroDoc not in(select nroDoc from g4_deportista) AND tipoDoc not in(select tipoDoc from g4_deportista)");
+    $sentencia = $this->db->prepare("select nroDoc,tipoDoc from Gr04_persona where nroDoc not in(select nroDoc from gr04_deportista)");
     $sentencia->execute();
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
 
   function getCategorias(){
-    $sentencia = $this->db->prepare("select cdoDisciplina,cdoCategoria from G4_categoria");
+    $sentencia = $this->db->prepare("select cdoDisciplina,cdoCategoria from GR04_categoria");
     $sentencia->execute();
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
