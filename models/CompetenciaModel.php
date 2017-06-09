@@ -34,11 +34,65 @@ include_once ("models/Model.php");
       $sentencia->execute(array($nuevoid,$tipoDoc,$dni,$idCompetencia,date("Y-m-d H:i:s")));
       var_dump($sentencia->errorInfo());
     } catch (Exception $e) {
-      
+
     }
+  }
 
+  function addCompetencia($competencia){
+    error_reporting(E_ERROR | E_WARNING | E_PARSE);
+    $id = $this->db->prepare('select max(idCompetencia) from gr04_competencia;');
+    $id->execute();
+    $ultimoid = $id->fetch(PDO::FETCH_ASSOC);
+    $nuevoid=$ultimoid['max']+1;
 
+    if(isset($competencia["cdodisciplina"])){
+      $cdoDis = $competencia["cdodisciplina"];
+    }
+    if(isset($competencia["nombrecomp"])){
+      $nombrecomp = $competencia["nombrecomp"];
+    }
+    if($competencia['fecha']!=''){
+      $fecha =$competencia['fecha'];
+    }
+    if(isset($competencia["lugar"])){
+      $lugar = $competencia["lugar"];
+    }
+    if(isset($competencia["localidad"])){
+      $localidad = $competencia["localidad"];
+    }
+    if(isset($competencia["organizador"])){
+      $organizador = $competencia["organizador"];
+    }
+    if(isset($competencia['individual'])){
+      $individual = "1";
+    }else{
+      $individual ="0";//1
+    }
+    if($competencia['fechalimite']!=''){
+      $fechalimite =$competencia['fechalimite'];
+    }
+    if(isset($competencia["cantjueces"])){
+      $cantjueces = $competencia["cantjueces"];
+    }
+    if(isset($competencia['cobertura'])){
+      $cobertura = "1";
+    }else{
+      $cobertura ="0";//1
+    }
+    if(isset($competencia["mapa"])){
+      $mapa = $competencia["mapa"];
+    }
+    if(isset($competencia["web"])){
+      $web = $competencia["web"];
+    }
+    var_dump($cdoDis);
+    try {//(tipoDoc,nroDoc,federado,fechaUltimaFederacion,nroLicencia,cdoCategoria,cdoDisciplina,cdofederacion,cdodisciplinafederacion)
+      $sentencia = $this->db->prepare("INSERT INTO gr04_competencia VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)");
+      $sentencia->execute(array($nuevoid,$cdoDis[0],$nombrecomp,$fecha,$lugar,$localidad,$organizador,$individual,$fechalimite,$cantjueces,$cobertura,$mapa,$web));
+      var_dump($sentencia->errorInfo());
+    } catch (Exception $e) {
 
+    }
   }
 }
 

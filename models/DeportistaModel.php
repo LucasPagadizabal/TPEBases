@@ -65,6 +65,7 @@ class DeportistaModel extends Model{
     try {//(tipoDoc,nroDoc,federado,fechaUltimaFederacion,nroLicencia,cdoCategoria,cdoDisciplina,cdofederacion,cdodisciplinafederacion)
       $sentencia = $this->db->prepare("INSERT INTO G4_deportista  VALUES(?,?,?,?,?,?,?)");
       $sentencia->execute(array($tipoDoc,(int) $dni,$federado,$fecha,$nroLicencia,$cdoCat,$cdoDis));
+      var_dump($sentencia->errorInfo());
     } catch (Exception $e) {
 
     }

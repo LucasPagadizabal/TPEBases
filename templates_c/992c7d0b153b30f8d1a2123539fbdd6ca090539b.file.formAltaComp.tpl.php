@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2017-06-06 22:16:04
+<?php /* Smarty version Smarty-3.1.14, created on 2017-06-09 21:49:28
          compiled from ".\templates\formAltaComp.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:829558ff733507c563-22796097%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '992c7d0b153b30f8d1a2123539fbdd6ca090539b' => 
     array (
       0 => '.\\templates\\formAltaComp.tpl',
-      1 => 1496780150,
+      1 => 1497037755,
       2 => 'file',
     ),
   ),
@@ -39,16 +39,16 @@ $_smarty_tpl->tpl_vars['d']->_loop = true;
             <?php } ?>
           </select>
           <br>
-            <input class="form-control" type="text"  placeholder="Nombre de Competencia">
+            <input class="form-control" type="text" name="nombrecomp" placeholder="Nombre de Competencia">
           <br>
             <label>Fecha</label>
             <input class="form-control" type="date" name="fecha" >
           <br>
-            <input class="form-control" type="text" placeholder="Lugar">
+            <input class="form-control" type="text" name="lugar" placeholder="Lugar">
           <br>
-            <input class="form-control" type="text" placeholder="Localidad">
+            <input class="form-control" type="text" name="localidad" placeholder="Localidad">
           <br>
-            <input class="form-control" type="text" placeholder="Organizador">
+            <input class="form-control" type="text" name="organizador" placeholder="Organizador">
           <br>
               <input id="individual" type="checkbox" name="individual">Individual
           <br>
@@ -56,14 +56,14 @@ $_smarty_tpl->tpl_vars['d']->_loop = true;
             <label>Fecha Limite</label>
             <input class="form-control" type="date" name="fechaLimite" >
           <br>
-            <input class="form-control" type="number" placeholder="Cantidad de Jueces">
+            <input class="form-control" type="number" name="cantjueces" placeholder="Cantidad de Jueces">
           <br>
             <input id="tv" type="checkbox" name="tv">Cobertura TV
           <br>
           <br>
-            <input class="form-control" type="text" placeholder="Mapa">
+            <input class="form-control" type="text" name="mapa" placeholder="Mapa">
           <br>
-            <input class="form-control" type="text" placeholder="Web">
+            <input class="form-control" type="text" name="web" placeholder="Web">
           <br>
           <br>
             <button type="submit" name="button">Crear</button>
