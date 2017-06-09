@@ -20,6 +20,12 @@ class viewDeportista{
       $this->smarty->display("formAltaDepor.tpl");
   }
 
+  function mostrarAltaInscripcion($mensaje,$estilo,$deportista){
+    $this->smarty->assign("mensaje",$mensaje);
+    $this->smarty->assign("estilo",$estilo);
+    $this->smarty->assign("deportista",$deportista);
+    $this->smarty->display("mensajeAltaDeportista.tpl");
+  }
 
 }
 

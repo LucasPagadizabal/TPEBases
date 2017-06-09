@@ -28,8 +28,8 @@ class Deportista{
   }
   function altaDepor(){
     $deportista = $_POST;
-    $this->modelDeportista->addDeportista($deportista);
-    $this->formDeportista();
+    $arr = $this->modelDeportista->addDeportista($deportista);
+    $this->viewDeportista->mostrarAltaInscripcion($arr["mensaje"],$arr["estilo"],$deportista);
   }
 
 }
