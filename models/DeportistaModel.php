@@ -63,13 +63,22 @@ class DeportistaModel extends Model{
       $cdoDisFed = NULL;
     }
     try {//(tipoDoc,nroDoc,federado,fechaUltimaFederacion,nroLicencia,cdoCategoria,cdoDisciplina,cdofederacion,cdodisciplinafederacion)
-      $sentencia = $this->db->prepare("INSERT INTO G4_deportista  VALUES(?,?,?,?,?,?,?)");
+      $sentencia = $this->db->prepare("INSERT INTO Gr04_deportista  VALUES(?,?,?,?,?,?,?)");
       $sentencia->execute(array($tipoDoc,(int) $dni,$federado,$fecha,$nroLicencia,$cdoCat,$cdoDis));
+
       var_dump($sentencia->errorInfo());
+      $error = $sentencia->errorInfo();
     } catch (Exception $e) {
 
     }
-
+  if($error[2] != NULL){
+      $arr["mensaje"] = $error[2];
+      $arr["estilo"] = "danger";
+    }else {
+      $arr["mensaje"] ="Se inscribio correctamente";
+      $arr["estilo"] = "success";
+    }
+    return $arr;
   }
 
  }
