@@ -29,8 +29,15 @@ include_once ("models/Model.php");
     $dni = $arrDni[1];
     $tipoDoc = $arrDni[0];
     $idCompetencia=$datos['idcompetencia'];
-    $sentencia = $this->db->prepare("INSERT into gr04_inscripcion(id,tipoDoc,nroDoc,idCompetencia,fecha) values(?,?,?,?,?)");
-    $sentencia->execute(array($nuevoid,$tipoDoc,$dni,$idCompetencia,date("Y-m-d H:i:s")));
+    try {
+      $sentencia = $this->db->prepare("INSERT into gr04_inscripcion(id,tipoDoc,nroDoc,idCompetencia,fecha) values(?,?,?,?,?)");
+      $sentencia->execute(array($nuevoid,$tipoDoc,$dni,$idCompetencia,date("Y-m-d H:i:s")));
+      var_dump($sentencia->errorInfo());
+    } catch (Exception $e) {
+      
+    }
+
+
 
   }
 }
