@@ -22,6 +22,8 @@ class Competencia{
 
   function altaComp(){
     $comp = $_POST;
+    $this->modelCompetencia->addCompetencia($comp);
+    $this->formAltaComp();
     //mandar al model para guardar
   }
 
