@@ -20,7 +20,7 @@ class DeportistaModel extends Model{
   }
 
   function getDeportistas(){
-    $sentencia = $this->db->prepare("select p.nroDoc,p.tipoDoc,p.nombre from Gr04_deportista d join gr04_persona p on(p.nroDoc=d.nroDoc and p.tipoDoc = d.tipoDoc)");
+    $sentencia = $this->db->prepare("select p.nroDoc,p.tipoDoc,p.nombre from Gr04_deportista d join gr04_persona p on(p.nroDoc=d.nroDoc and p.tipoDoc = d.tipoDoc) where d.nroDoc not in(select i.nroDoc from gr04_inscripcion i where nroDoc IS NOT NULL)");
     $sentencia->execute();
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }

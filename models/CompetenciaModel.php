@@ -21,7 +21,7 @@ include_once ("models/Model.php");
   }
 
   function inscribirDeportista($datos){
-    $id = $this->db->prepare('select max(idCompetencia) from gr04_inscripcion;');
+    $id = $this->db->prepare('select max(id) from gr04_inscripcion;');
     $id->execute();
     $ultimoid = $id->fetch(PDO::FETCH_ASSOC);
     $nuevoid=$ultimoid['max']+1;
@@ -30,7 +30,8 @@ include_once ("models/Model.php");
     $tipoDoc = $arrDni[0];
     $idCompetencia=$datos['idcompetencia'];
     $sentencia = $this->db->prepare("INSERT into gr04_inscripcion(id,tipoDoc,nroDoc,idCompetencia,fecha) values(?,?,?,?,?)");
-    $sentencia->execute(array($nuevoid,$tipoDoc,$dni,$idCompetencia,"03/03/2017"));
+    $sentencia->execute(array($nuevoid,$tipoDoc,$dni,$idCompetencia,date("Y-m-d H:i:s")));
+
   }
 }
 

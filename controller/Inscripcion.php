@@ -27,9 +27,8 @@ class Inscripcion{
 
   function inscribirDeportista(){
     $datos=$_POST;
-    $inscripcion = $this->CompetenciaModel->inscribirDeportista($datos);
-    $mensaje='mensaje ok';
-    //$this->viewInscripcion->showFormInscripcion($mensaje);
+    $men = $inscripcion = $this->CompetenciaModel->inscribirDeportista($datos);
+    //$this->viewInscripcion->showFormInscripcion($men);
   }
 
 }
