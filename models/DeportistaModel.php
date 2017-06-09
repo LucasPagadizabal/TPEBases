@@ -19,8 +19,14 @@ class DeportistaModel extends Model{
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
 
+  function getDeportistas(){
+    $sentencia = $this->db->prepare("select p.nroDoc,p.tipoDoc,p.nombre from Gr04_deportista d join gr04_persona p on(p.nroDoc=d.nroDoc and p.tipoDoc = d.tipoDoc)");
+    $sentencia->execute();
+    return $sentencia->fetchAll(PDO::FETCH_ASSOC);
+  }
+
   function getFederaciones(){
-    $sentencia = $this->db->prepare("select cdoFederacion,cdoDisciplina from G4_federacion");
+    $sentencia = $this->db->prepare("select cdoFederacion,cdoDisciplina from Gr04_federacion");
     $sentencia->execute();
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }

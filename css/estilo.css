@@ -8,6 +8,10 @@ body {
   background-position: center;
 }
 
+.btn-submit{
+  color:  rgb(26, 136, 207);
+}
+
 .home-text{
   text-align: justify;
 }

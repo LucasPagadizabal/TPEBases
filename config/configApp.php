@@ -11,6 +11,7 @@ class ConfigApp{
 
   public static $ACTION_AGREGAR_DEPORTISTA = 'agregar_deportista';
   public static $ACTION_AGREGAR_COMPETENCIA= 'agregar_competencia';
+  public static $ACTION_INSCRIBIR_DEPORTISTA= 'inscribir_deportista';
 
   public static $ACTION_SERVICIO1 = "servicio1";
   public static $ACTION_SERVICIO1LISTA = "servicio1lista";

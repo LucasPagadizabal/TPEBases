@@ -70,6 +70,23 @@ $(document).ready(function(){
         });
     });
 
+    $(document).on("submit", ".formInscripcion", function(event)
+    {
+        event.preventDefault();
+        var url=$(this).attr("href");
+        $.ajax({
+            url: url,
+            type: $(this).attr("method"),
+            data: new FormData(this),
+            processData: false,
+            contentType: false,
+            success: function (data)
+            {
+              $('.page').html(data);
+            },
+        });
+    });
+
     $(document).on("change","#addFederaciones",function(ev) {
       ev.preventDefault();
 

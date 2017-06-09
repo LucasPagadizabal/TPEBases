@@ -13,8 +13,9 @@ class viewInscripcion{
     $this->smarty = new Smarty();
   }
 
-  function showFormInscripcion(){
-    //$this->smarty->assign('','');
+  function showFormInscripcion($competencias,$deportistas){
+    $this->smarty->assign('deportistas',$deportistas);
+    $this->smarty->assign('competencias',$competencias);
     $this->smarty->display('formInscripcion.tpl');
   }
 }
