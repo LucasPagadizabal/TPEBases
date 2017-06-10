@@ -35,7 +35,7 @@
               </select>
         </div>
         <br>
-          <button type="submit" name="button">Submit</button>
+          <button class="form-control btn-submit" type="submit" name="button">Submit</button>
         <br>
     </form>
 </div>

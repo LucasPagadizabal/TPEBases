@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2017-06-09 16:44:24
+<?php /* Smarty version Smarty-3.1.14, created on 2017-06-10 00:02:59
          compiled from ".\templates\formInscripcion.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:2377959036a71ca0d39-11148941%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'cc93242c7f5c7b43376494a4ca0ed98d9cbfa0ae' => 
     array (
       0 => '.\\templates\\formInscripcion.tpl',
-      1 => 1497019336,
+      1 => 1497045774,
       2 => 'file',
     ),
   ),
@@ -30,7 +30,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <div class="panel panel-default col-md-8 col-md-offset-2 titulo-form" >
       <h3>Inscripcion Deportista a Competencia</h3>
   </div>
-  <form class="formInscripcion col-md-6 col-md-offset-3" method="post" href="index.php?action=inscribir_deportista">
+<div  class="panel panel-default col-md-7 col-md-offset-2 panel-form" >
+  <form class="formInscripcion" method="post" href="index.php?action=inscribir_deportista">
     <div class="form-group">
       <label class="control-label">Deportista</label>
       <select class="form-control col-md-2 deportistaSel" name="doc_deportista" >
@@ -46,7 +47,7 @@ $_smarty_tpl->tpl_vars['d']->_loop = true;
         <?php } ?>
       </select>
         <br>
-        <label class="control-label">Competencia</label>
+        <div> <label class="control-label">Competencia</label>
         <select class="form-control col-md-2 idCompetenciaSel" name="idcompetencia" >
           <?php  $_smarty_tpl->tpl_vars['c'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['c']->_loop = false;
  $_from = $_smarty_tpl->tpl_vars['competencias']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -58,15 +59,16 @@ $_smarty_tpl->tpl_vars['c']->_loop = true;
 </option>
           <?php } ?>
         </select>
-        <br>
-        <div class="">
-          <button class="form-control btn-submit" type="submit" name="button">Inscribir</button>
         </div>
+        <br>
+          <button class="form-control btn-submit" type="submit" name="button">Inscribir</button>
+        <br>
         <!--<button type="submit" name="button">Seleccionar</button>-->
       </div>
 
   </form>
-  <div  id="resultadoinscripcion" >
+</div>
+  <div  class="resultado" >
   <!--<?php echo $_smarty_tpl->getSubTemplate ("servicio1lista.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, null, null, array(), 0);?>
 -->
 </div>

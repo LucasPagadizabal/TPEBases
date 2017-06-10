@@ -9,7 +9,9 @@ body {
 }
 
 .btn-submit{
-  color:  rgb(26, 136, 207);
+  background: rgb(40, 120, 69);
+  color:  white;
+  margin-top: 30px;
 }
 
 .home-text{

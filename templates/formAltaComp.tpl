@@ -1,5 +1,7 @@
-<div style="margin-top:50px;" class="panel panel-default col-md-7 col-md-offset-2">
-  <h3>Alta de Competencia</h3>
+<div class="panel panel-default col-md-7 col-md-offset-2 titulo-form" >
+    <h3>Alta Competencia</h3>
+</div>
+<div class="panel panel-default col-md-7 col-md-offset-2 panel-form">
     <form class="formComp" method="post" href="index.php?action=agregar_competencia">
           <select class="form-control" name="cdodisciplina">
             {foreach from=$disciplinas item=d}
@@ -34,7 +36,7 @@
             <input class="form-control" type="text" name="web" placeholder="Web">
           <br>
           <br>
-            <button type="submit" name="button">Crear</button>
+            <button class="form-control btn-submit" type="submit" name="button">Crear</button>
           <br>
     </form>
 </div>

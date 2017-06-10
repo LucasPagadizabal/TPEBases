@@ -32,7 +32,6 @@ include_once ("models/Model.php");
     try {
       $sentencia = $this->db->prepare("INSERT into gr04_inscripcion(id,tipoDoc,nroDoc,idCompetencia,fecha) values(?,?,?,?,?)");
       $sentencia->execute(array($nuevoid,$tipoDoc,$dni,$idCompetencia,date("Y-m-d H:i:s")));
-      var_dump($sentencia->errorInfo());
     } catch (Exception $e) {
 
     }
@@ -85,11 +84,9 @@ include_once ("models/Model.php");
     if(isset($competencia["web"])){
       $web = $competencia["web"];
     }
-    var_dump($cdoDis);
     try {//(tipoDoc,nroDoc,federado,fechaUltimaFederacion,nroLicencia,cdoCategoria,cdoDisciplina,cdofederacion,cdodisciplinafederacion)
       $sentencia = $this->db->prepare("INSERT INTO gr04_competencia VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?)");
       $sentencia->execute(array($nuevoid,$cdoDis[0],$nombrecomp,$fecha,$lugar,$localidad,$organizador,$individual,$fechalimite,$cantjueces,$cobertura,$mapa,$web));
-      var_dump($sentencia->errorInfo());
     } catch (Exception $e) {
 
     }

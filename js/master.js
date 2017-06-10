@@ -14,7 +14,6 @@ $(document).ready(function(){
        event.preventDefault();
       var nro = $(this).attr("nroSer");
       $.get("index.php?action=servicio"+nro,function(data) {
-        console.log(data);
         $('.page').html(data);
         //initDynamicEventHandlers();
       });
@@ -26,8 +25,16 @@ $(document).ready(function(){
     //console.log($(this).val());
     var path= "servicio"+$(this).attr("nroSer")+"lista";
    $.get("index.php?action="+path,{ idcompetencia: $(this).val() },function(data) {
-     console.log(data);
-     console.log(path);
+     $('#'+path).html(data);
+     //initDynamicEventHandlers();
+   });
+  });
+
+  $(document).on("change",".idDeportistaSel", function(event){
+    event.preventDefault();
+    //console.log($(this).val());
+    var path= "servicio"+$(this).attr("nroSer")+"lista";
+   $.get("index.php?action="+path,{ iddeportista: $(this).val() },function(data) {
      $('#'+path).html(data);
      //initDynamicEventHandlers();
    });

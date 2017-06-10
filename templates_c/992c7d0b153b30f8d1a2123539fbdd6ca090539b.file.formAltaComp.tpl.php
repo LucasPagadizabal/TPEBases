@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.14, created on 2017-06-09 21:49:28
+<?php /* Smarty version Smarty-3.1.14, created on 2017-06-09 23:51:31
          compiled from ".\templates\formAltaComp.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:829558ff733507c563-22796097%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '992c7d0b153b30f8d1a2123539fbdd6ca090539b' => 
     array (
       0 => '.\\templates\\formAltaComp.tpl',
-      1 => 1497037755,
+      1 => 1497045049,
       2 => 'file',
     ),
   ),
@@ -24,8 +24,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58ff733523b722_00476120')) {function content_58ff733523b722_00476120($_smarty_tpl) {?><div style="margin-top:50px;" class="panel panel-default col-md-7 col-md-offset-2">
-  <h3>Alta de Competencia</h3>
+<?php if ($_valid && !is_callable('content_58ff733523b722_00476120')) {function content_58ff733523b722_00476120($_smarty_tpl) {?><div class="panel panel-default col-md-7 col-md-offset-2 titulo-form" >
+    <h3>Alta Competencia</h3>
+</div>
+<div class="panel panel-default col-md-7 col-md-offset-2 panel-form">
     <form class="formComp" method="post" href="index.php?action=agregar_competencia">
           <select class="form-control" name="cdodisciplina">
             <?php  $_smarty_tpl->tpl_vars['d'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['d']->_loop = false;
@@ -66,7 +68,7 @@ $_smarty_tpl->tpl_vars['d']->_loop = true;
             <input class="form-control" type="text" name="web" placeholder="Web">
           <br>
           <br>
-            <button type="submit" name="button">Crear</button>
+            <button class="form-control btn-submit" type="submit" name="button">Crear</button>
           <br>
     </form>
 </div>

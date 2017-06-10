@@ -1,5 +1,5 @@
 <?php
 
-echo ('error  lpm');
+echo ('error  de conexion');
 
  ?>

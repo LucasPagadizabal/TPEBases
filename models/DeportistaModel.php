@@ -20,7 +20,7 @@ class DeportistaModel extends Model{
   }
 
   function getDeportistas(){
-    $sentencia = $this->db->prepare("select p.nroDoc,p.tipoDoc,p.nombre from Gr04_deportista d join gr04_persona p on(p.nroDoc=d.nroDoc and p.tipoDoc = d.tipoDoc) where d.nroDoc not in(select i.nroDoc from gr04_inscripcion i where nroDoc IS NOT NULL)");
+    $sentencia = $this->db->prepare("select p.nroDoc,p.tipoDoc,p.nombre from Gr04_deportista d join gr04_persona p on(p.nroDoc=d.nroDoc and p.tipoDoc = d.tipoDoc)");
     $sentencia->execute();
     return $sentencia->fetchAll(PDO::FETCH_ASSOC);
   }
@@ -65,8 +65,6 @@ class DeportistaModel extends Model{
     try {//(tipoDoc,nroDoc,federado,fechaUltimaFederacion,nroLicencia,cdoCategoria,cdoDisciplina,cdofederacion,cdodisciplinafederacion)
       $sentencia = $this->db->prepare("INSERT INTO Gr04_deportista  VALUES(?,?,?,?,?,?,?)");
       $sentencia->execute(array($tipoDoc,(int) $dni,$federado,$fecha,$nroLicencia,$cdoCat,$cdoDis));
-
-      var_dump($sentencia->errorInfo());
       $error = $sentencia->errorInfo();
     } catch (Exception $e) {
 
